@@ -3,23 +3,179 @@
 
 <head>
 <title>162037 - Sondos Kelani</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#f3ecff,#ffffff);
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#8a2be2;
+padding:15px 40px;
+color:white;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.navbar a:hover{
+color:#e0c8ff;
+}
+
+/* Container */
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+/* Profile */
+
+.profile{
+text-align:center;
+margin-bottom:40px;
+}
+
+.profile img{
+width:260px;
+height:260px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #8a2be2;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.profile img:hover{
+transform:scale(1.05);
+}
+
+.info{
+margin-top:10px;
+color:#444;
+}
+
+.student-info{
+margin-top:10px;
+color:#6a0dad;
+font-weight:bold;
+}
+
+/* Sections */
+
+.section{
+background:white;
+padding:25px;
+margin-bottom:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.section:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Soft Skills */
+
+.skills-tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.skills-tags span{
+background:#f0e9ff;
+color:#6a0dad;
+padding:8px 16px;
+border-radius:20px;
+font-weight:bold;
+font-size:14px;
+transition:0.3s;
+}
+
+.skills-tags span:hover{
+background:#8a2be2;
+color:white;
+transform:scale(1.05);
+}
+
+/* Table */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+th{
+background:#f0e9ff;
+}
+
+/* Email Button */
+
+.email-btn{
+display:inline-block;
+padding:12px 25px;
+background:#8a2be2;
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.email-btn:hover{
+background:#6d1fc7;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <nav class="navbar">
+
 <div class="logo">Sondos Kelani</div>
+
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
+
 </nav>
+
 
 <div class="container">
 
 <div class="profile">
+
 <img src="photo.jpg">
+
 <h1>Sondos Kelani</h1>
 
 <p class="info">
@@ -31,11 +187,14 @@ Academic Level: Fourth Year
 Student ID: 162037 <br>
 Email: sakelani22@cit.just.edu.jo
 </p>
+
 </div>
 
-<!-- Soft Skills -->
+
 <div class="section">
+
 <h2>Soft Skills</h2>
+
 <div class="skills-tags">
 <span>🤝 Teamwork</span>
 <span>🧠 Analytical Thinking</span>
@@ -43,46 +202,60 @@ Email: sakelani22@cit.just.edu.jo
 <span>💬 Communication</span>
 <span>⚡ Adaptability</span>
 </div>
+
 </div>
 
-<!-- Favorite Technologies -->
+
 <div class="section">
+
 <h2>Favorite Technologies</h2>
+
 <table>
+
 <tr>
 <th>Technology</th>
 <th>Learn More</th>
 </tr>
+
 <tr>
 <td>🐍 Python</td>
 <td><a href="https://www.python.org" target="_blank">Visit</a></td>
 </tr>
+
 <tr>
 <td>📱 Flutter</td>
 <td><a href="https://flutter.dev" target="_blank">Visit</a></td>
 </tr>
+
 <tr>
 <td>🎯 Dart</td>
 <td><a href="https://dart.dev" target="_blank">Visit</a></td>
 </tr>
+
 <tr>
 <td>💻 Front-End Development</td>
 <td><a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer" target="_blank">Visit</a></td>
 </tr>
+
 <tr>
 <td>🖥️ Back-End Development</td>
 <td><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side" target="_blank">Visit</a></td>
 </tr>
+
 <tr>
 <td>🗄️ SQL</td>
 <td><a href="https://www.mysql.com" target="_blank">Visit</a></td>
 </tr>
+
 </table>
+
 </div>
 
-<!-- Future Goals -->
+
 <div class="section">
+
 <h2>Where Do I See Myself in 4 Years?</h2>
+
 <p>
 In four years, I see myself working in the software development field.
 I am especially interested in mobile application development using Flutter.
@@ -90,14 +263,18 @@ I also want to work in Quality Assurance (QA) to ensure that applications are re
 My goal is to build useful applications that solve real problems.
 I hope to gain professional experience and continue improving my programming and software testing skills.
 </p>
+
 </div>
 
-<!-- Contact Me -->
+
 <div class="section">
+
 <h2>Contact Me</h2>
+
 <a class="email-btn" href="mailto:sakelani22@cit.just.edu.jo">
 Send Me an Email
 </a>
+
 </div>
 
 </div>
