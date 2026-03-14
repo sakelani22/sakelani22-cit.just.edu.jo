@@ -13,7 +13,6 @@ background:linear-gradient(135deg,#f3ecff,#ffffff);
 }
 
 /* Navbar */
-
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -33,6 +32,7 @@ gap:20px;
 color:white;
 text-decoration:none;
 font-weight:bold;
+cursor:pointer;
 }
 
 .navbar a:hover{
@@ -40,7 +40,6 @@ color:#e0c8ff;
 }
 
 /* Container */
-
 .container{
 max-width:900px;
 margin:auto;
@@ -48,7 +47,6 @@ padding:30px;
 }
 
 /* Profile */
-
 .profile{
 text-align:center;
 margin-bottom:40px;
@@ -75,7 +73,6 @@ font-weight:bold;
 }
 
 /* Sections */
-
 .section{
 background:white;
 padding:25px;
@@ -85,7 +82,6 @@ box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* Soft Skills */
-
 .skills-tags{
 display:flex;
 flex-wrap:wrap;
@@ -103,7 +99,6 @@ font-size:14px;
 }
 
 /* Table */
-
 table{
 width:100%;
 border-collapse:collapse;
@@ -119,12 +114,62 @@ th{
 background:#f0e9ff;
 }
 
-/* Form */
-
-form{
-margin-top:15px;
+/* Button */
+button{
+background:#8a2be2;
+color:white;
+padding:12px;
+border:none;
+border-radius:8px;
+width:100%;
+font-size:16px;
+cursor:pointer;
 }
 
+button:hover{
+background:#6d1fc7;
+}
+
+/* Modal */
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+overflow:auto;
+background-color:rgba(0,0,0,0.6);
+}
+
+.modal-content{
+background-color:#fff;
+margin:10% auto;
+padding:20px;
+border-radius:10px;
+width:90%;
+max-width:500px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+position:relative;
+}
+
+/* Close button */
+.close{
+position:absolute;
+top:10px;
+right:15px;
+font-size:24px;
+font-weight:bold;
+color:#8a2be2;
+cursor:pointer;
+}
+
+.close:hover{
+color:#6d1fc7;
+}
+
+/* Form inside modal */
 input, textarea, select{
 width:100%;
 padding:10px;
@@ -134,26 +179,18 @@ border-radius:5px;
 border:1px solid #ccc;
 }
 
-button{
-background:#8a2be2;
-color:white;
-padding:12px;
-border:none;
-border-radius:8px;
-width:100%;
-font-size:16px;
-}
-
-button:hover{
-background:#6d1fc7;
-}
-
 </style>
 
 <script>
+function openModal(){
+document.getElementById("contactModal").style.display="block";
+}
+
+function closeModal(){
+document.getElementById("contactModal").style.display="none";
+}
 
 function validateForm(){
-
 var name=document.getElementById("name").value;
 var email=document.getElementById("email").value;
 var country=document.getElementById("country").value;
@@ -165,10 +202,9 @@ return false;
 }
 
 alert("Form submitted successfully!");
+closeModal();
 return true;
-
 }
-
 </script>
 
 </head>
@@ -176,42 +212,30 @@ return true;
 <body>
 
 <nav class="navbar">
-
 <div class="logo">Sondos Kelani</div>
-
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#contact">Contact Me</a></li>
+<li><a onclick="openModal()">Contact Me</a></li>
 </ul>
-
 </nav>
-
 
 <div class="container">
 
 <div class="profile">
-
 <img src="photo.jpg">
-
 <h1>Sondos Kelani</h1>
-
 <p class="info">
 Major: Computer Information Systems <br>
 Academic Level: Fourth Year
 </p>
-
 <p class="student-info">
 Student ID: 162037 <br>
 Email: sakelani22@cit.just.edu.jo
 </p>
-
 </div>
 
-
 <div class="section">
-
 <h2>Soft Skills</h2>
-
 <div class="skills-tags">
 <span>🤝 Teamwork</span>
 <span>🧠 Analytical Thinking</span>
@@ -219,82 +243,64 @@ Email: sakelani22@cit.just.edu.jo
 <span>💬 Communication</span>
 <span>⚡ Adaptability</span>
 </div>
-
 </div>
 
-
 <div class="section">
-
 <h2>Favorite Technologies</h2>
-
 <table>
-
 <tr>
 <th>Technology</th>
 <th>Learn More</th>
 </tr>
-
 <tr>
 <td>🐍 Python</td>
 <td><a href="https://www.python.org" target="_blank">Visit</a></td>
 </tr>
-
 <tr>
 <td>📱 Flutter</td>
 <td><a href="https://flutter.dev" target="_blank">Visit</a></td>
 </tr>
-
 <tr>
 <td>🎯 Dart</td>
 <td><a href="https://dart.dev" target="_blank">Visit</a></td>
 </tr>
-
 <tr>
 <td>💻 Front-End Development</td>
 <td><a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer" target="_blank">Visit</a></td>
 </tr>
-
 <tr>
 <td>🖥️ Back-End Development</td>
 <td><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side" target="_blank">Visit</a></td>
 </tr>
-
 <tr>
 <td>🗄️ SQL</td>
 <td><a href="https://www.mysql.com" target="_blank">Visit</a></td>
 </tr>
-
 </table>
-
 </div>
 
-
 <div class="section">
-
 <h2>Where Do I See Myself in 4 Years?</h2>
-
 <p>
 In four years, I see myself working in the software development field.
 I am especially interested in mobile application development using Flutter.
 I also want to work in Quality Assurance (QA) to ensure that applications are reliable and user-friendly.
 My goal is to build useful applications that solve real problems.
 </p>
+</div>
 
 </div>
 
-
-<div class="section" id="contact">
-
+<!-- Modal for Contact Form -->
+<div id="contactModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
 <h2>Contact Me</h2>
-
 <form onsubmit="return validateForm()">
-
 <label>Full Name</label>
 <input type="text" id="name">
-
 <label>Email Address</label>
 <input type="email" id="email">
-
 <label>Country</label>
 <select id="country">
 <option value="">Select Country</option>
@@ -303,16 +309,11 @@ My goal is to build useful applications that solve real problems.
 <option>UAE</option>
 <option>Other</option>
 </select>
-
 <label>Comments</label>
 <textarea id="comment"></textarea>
-
 <button type="submit">Submit</button>
-
 </form>
-
 </div>
-
 </div>
 
 </body>
