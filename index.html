@@ -26,16 +26,21 @@ color:white;
 display:flex;
 list-style:none;
 gap:20px;
+margin:0;
+padding:0;
 }
 
-.navbar a{
+.navbar a, .navbar button{
 color:white;
 text-decoration:none;
 font-weight:bold;
 cursor:pointer;
+background:none;
+border:none;
+font-size:16px;
 }
 
-.navbar a:hover{
+.navbar a:hover, .navbar button:hover{
 color:#e0c8ff;
 }
 
@@ -215,14 +220,14 @@ return true;
 <div class="logo">Sondos Kelani</div>
 <ul>
 <li><a href="#">Home</a></li>
-<li><a onclick="openModal()">Contact Me</a></li>
+<li><button onclick="openModal()">Contact Me</button></li>
 </ul>
 </nav>
 
 <div class="container">
 
 <div class="profile">
-<img src="photo.jpg">
+<img src="photo.jpg" alt="Profile Photo">
 <h1>Sondos Kelani</h1>
 <p class="info">
 Major: Computer Information Systems <br>
